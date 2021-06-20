@@ -1,0 +1,101 @@
+What is a Cookie?
+An HTTP cookie (also called web cookie, Internet cookie, browser cookie, or simply cookie) is a small piece of data stored on the user's 
+computer by the web browser while browsing a website.
+
+We can think of cookies as text files, which are saved to your computer. When you request any web page, a web server sends the response of that web page to your browser. 
+Along with the response, a web server could also send Set-Cookie HTTP headers that request your browser to create cookie files on your computer. Once cookies are created for a 
+website, a web server can subsequently read and write content from and to these files. 
+
+Cookies have an expiration date along with the cookie data. This date is set so that a browser can delete old cookies when they are no longer needed by a web browser. 
+If the expiration date is empty, the cookie will be deleted when the connection with the server is closed. This occurs when the user closes the site's window or tab, or when 
+the user closes the entir browser. These Cookies, sometimes called session cookies, are mostly used for storing temporary settings. 
+
+Set-cookie HTTP header example:
+Set-Cookie: LastVisitedSection=CodeTutsplus; expires=Fri, 31-Mar-2021 23:59:59 GMT; path=/; domain=.tutsplus.com
+
+A web server asks the browser to create the LastVisitedSection cookie. The browser would store CodeTutsplus as the cookie data. A cookie file can store a text string or a number
+up to 4KB in size.
+The expires attribute is used to specify the expiration date. And thus, the LastVisitedSection cookie will be deleted from your computer after the 31-Mar-2021 23:59:59 GMT date.
+The domain attribute is used to specify the domain in which the cookie will be active. If the domain is ads.google.com, the cookie will only be sent to the server of that domain,
+and if the domain is .google.com, the cookie will be sent to any server of any of the subdomains of Google, including google.com itself. \
+The path is the path of the domain to which the cookie is sent. This means that, if the path is set to /images/, and the domain is set to ads.goolge.com, the cookie will only sent
+to the server if the browser requests a file from ads.google.com/images/. If the path is set to / , the cookie will be sent to the server regardless of the location of the requested
+file on the server. 
+
+What is the purpose of Cookies?
+The HTTP protocol is a stateless protocol, which means that there's no built-in way a server can remember a specific user between multiple requests. For example, 
+when you access a web page, the server is just responsible for providing the contents of the requested page. When you access other pages of the same web site, 
+the web server interprets each and every request separately, as if they were unrelated to one another. There's no way for the server to know that each request 
+originated form the same user. 
+
+Now, if you want to implement features like user login or shopping carts, you'll need to identify if two requests came from the same browser. This is not possible with
+a stateless protocol. We need to maintain state ro session between requests that are made by a browser to indentify a user. That is where cookies come to the rescue!!
+
+cookies allow you to share information across the different pages of a single site or app--thus they help maintain state. This lets the server know that all requests 
+originate form the same user, thus allowing the site to display user-specific information and preferences. 
+
+|----------|                                                                                |-------------|
+|          |----------------->1.requests a web page --------------------------------------->|             | 
+|  Client  |<-----2.Server responds with web page contents and cookies <--------------------|   Server    |
+|          |---------->3.Subsequent requests contain the stored cookie -------------------->|             |
+|----------|<4.Server remembers a user by a cookie and returns personalized response <------|-------------|
+
+
+How to create cookies in PHP?
+To create cookies in PHP, you need to use the setcookie function. Let's have a look at the basic syntax which is used to create a cookie. 
+setcookie(string $name, string $value="", int $expires=0, string $path="", bool $secure=false, bool $httponly=false);
+
+If you set the $secure parameter to TRUE, the cookie will only be created if a secure connection exists. The $httponly parameter allows you to make cookies HTTP only, 
+and thus it will be accessible only through the HTTP protocol. Cookies that are set as HTTP only won't be accessible by scripting languages like Javascript. 
+
+Syntax:
+<?php
+setcookie("LastVisitedSection", "CodeTutsplus", time()+3600, "/", "tusplus.com",1);
+//It would create the LastVisitedSection cookie with the CodeTutsplus value, and it would expire in an hour. The path argument is set to /, so it would be sent to all
+pages of the tutsplus.com domain.
+?>
+
+<?php
+setcookie("favCourse", "PHP", time()+3600, "/courses/", "code.tutsplus.com",1);
+//We set the path argument to /course/, the favCourse cookie will be only sent if a browser requests pages from https://code.tutsplus.com/course/.
+?>
+Remember, when creating a cookie in PHP, it is a must to set all cookies before sending any data to the browser. Cookies belong to the header, so you should always
+initialize new cookies before any output. This includes echo or print commands, and the <html> or <body> tages.
+
+How to read cookies in PHP?
+Reading cookies in php is straightforward. You need to use the $_COOKIE superglobal variable to read available cookies. In fact, the $_COOKIE variable is an array which contains
+all cookies. 
+
+<?php
+if(isset($_COOKIE["LastVisitedSection"])){
+  echo "recently visited section: " . $_COOKIE["LastVisitedSection"];
+}else{
+  echo "welcome guest! We encourage you to explore different sections.";
+}
+?>
+
+DELETE Cookies in PHP?
+<?php
+unset($_COOKIE["LastVisitedSection"]);
+setCookie("LastVisitedSection", "", time() - 3600, "/");
+?>
+
+Note:
+Never insert sensitive fata into a cookie. A client could be browsing on a public computer, so don't leave any personal information behind. 
+Never trust data coming from cookies. Always filter strings and numbers! Client computers can change cookies at will, so an attacker could write malicious data to the cookie
+in order to do something you don't want your service to do.
+Try to estimate how long the cookie should be valid, and set the expiration date accordingly. you don't want to hog the client's computer with old cookies which are set to expire in a 
+hundred years. 
+Always set the secure and httponly flages when possible. If your application doesn't edit the cookie with Javascript, enable httponly. If you always have an HTTPS connection, enable secure. This improves
+the data's integrity and confidentiality. 
+
+
+
+
+
+
+
+
+
+
+
