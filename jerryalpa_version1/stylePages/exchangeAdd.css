@@ -1,0 +1,213 @@
+
+* {
+    box-sizing: border-box;
+  }
+
+    body, html {
+        font-family: 'Courier New', Courier, monospace;
+        /* font-family: Arial, Helvetica, sans-serif; */
+        /* Arial, Helvetica, sans-serif*/
+        height: 100%;
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        overflow-x: visible;  
+        background-color: rgb(243, 246, 247);
+        scroll-behavior: smooth;
+    }
+
+      /* scroll bar style */
+        /* width */
+    ::-webkit-scrollbar {
+        width: 2px;
+    }
+
+     /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+ 
+     /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: rgb(107, 106, 106); 
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(51, 51, 51); 
+    }
+
+    .page-container{
+        position: relative;
+        min-height: 100%;
+    }
+
+    .content-wrap{
+        /* footer height */
+        padding-bottom: 2.5rem;
+    }
+
+    .big-container{
+        display:flex;
+        padding: 1rem;
+        margin: 0;
+        flex-wrap: wrap;
+        align-content: space-around;
+        flex-direction: row;
+    }
+
+    .container{
+        border: 1px solid black; 
+        background-color: white;
+        padding: 1rem;
+        margin-top: 0%;
+        height:fit-content;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+        width: 100%;
+    }
+
+    div{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2.5rem;
+        font-size: 80%;
+    }
+
+    .copyright-text{
+        color: black;
+        padding-top: 10px;
+        display: table;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    a, a:hover, a:link, a:visited{
+        text-decoration:underline;
+        color:black;
+      }
+
+    input[type=file]{
+        display: none;
+    }
+
+    label{
+        border: 1px solid black;
+        padding: 10px 20px;
+        text-align: center;
+        border-radius: 15px;
+        display: inline-flex;
+        margin-bottom: 20px;
+        color: rgb(0, 0, 0);
+        font:900;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+/* 
+    label:hover{
+        background-color: yellow;
+    } */
+
+    h2{
+        background-color: rgb(7, 7, 7);
+        color:rgb(255, 255, 255);
+        border-radius: 15px;
+        /* box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.932); */
+        text-align:center; 
+        font-size: 140%;
+        padding: 8px 10px;
+        margin-left: 2rem;
+        /* margin-right: 2.5rem; */
+        margin-top: 4%;
+    }
+
+    label .exchangeLocation{
+        text-align: left;
+        display: flex;
+    }
+
+
+
+    input[type=text]{
+        width: 80%;
+        height: 50px;
+    }
+
+    input[type=submit]{
+        font-family: 'Courier New', Courier, monospace;
+        border: 1px solid black;
+        padding: 10px 20px;
+        text-align: center;
+        border-radius: 15px;
+        display: inline-flex;
+        margin-bottom: 20px;
+        color: white;
+        background-color: rgb(0, 0, 0);
+        font:900;
+    }
+
+    input[type=submit]:hover{
+        background-color: gray;
+    }
+
+    a.back{
+        border: 1px solid black;
+        border-radius: 15px;
+        background-color: black;
+        color: white;
+        padding: 8px 16px;
+        margin: 10px;
+        text-decoration: none;
+    }
+
+    a.back:hover{
+        background-color: gray;
+    }  
+
+    @media screen and (max-width: 710px) {
+        h2{
+            font-size: 120%;
+        }
+        label{
+            padding: 8px 16px;
+        }
+    }
+
+    
+    @media screen and (max-width: 500px) {
+        /* a{
+            text-align: center;
+        } */
+        h2{
+            font-size: 100%;
+        }
+
+        a.back{
+            padding: 8px 16px;
+            margin: 5px;
+            font: 80%;
+        }
+
+    }
+
+    @media screen and (max-width: 400px) {
+        h2{
+            font-size: 95%;
+        }
+
+        label{
+            padding: 6px 10px;
+        }
+
+        .container a{
+            padding: 4px 10px;
+        }
+    }
+

@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: 'Courier New', Courier, monospace;
+    /* Arial, Helvetica, sans-serif*/
+    height: 100%;
+    margin: 0;
+    /* background-color: rgb(241, 33, 36); */
+    background-color: rgb(247, 247, 247);
+    width: 100%;
+    padding: 0px;
+    overflow-x: hidden; 
+    scroll-behavior: smooth;
+  }
+
+    /* scroll bar style */
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+ 
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(107, 106, 106); 
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(51, 51, 51); 
+  }
+
+  .icon2{
+    border-radius: 15px;
+    width:60px;
+    height:60px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+
+  .icon2:hover{
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  h1{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .content-wrap{
+    padding-bottom: 2.5rem; 
+  }
+
+  div {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  /* span::before{
+    position: relative;
+  } */
+
+  label {
+    display: inline-block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  input[type=text]{
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 40px;
+    width: 250px;
+  }
+
+  input[type=email]{
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 40px;
+    width: 250px;
+  }
+
+  input[type=password]{
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 40px;
+    width: 250px;
+  }
+
+  input[type=submit]{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(255, 213, 32);
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    font-size: 15px;
+    font:bolder;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+
+  input[type=submit]:hover{
+    background-color: black;
+    color: white;
+  }
+
+  input[type=checkbox]{
+    border: 2px solid black;
+
+  }
+  
+  a, a:hover, a:link, a:visited {
+    text-decoration:underline;
+    color:black;
+  }
+
+  .return-link, .return-link:link, .return-link:visited, .return-link:active{
+    background-color:rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 0px;
+    text-decoration: none;
+    display:inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 200px;
+    height:43px;
+    font:bolder;
+    border-radius: 10px;
+  }
+
+  .return-link:hover{
+    background-color: rgb(136, 136, 136);
+  }
+ 
+  pre{
+    border: #000000 1px solid;
+    padding: 2px 2px 2px 2px;
+    display: inline-table;
+    background-color: #495bff;
+    color: white;
+    z-index: 999;
+    left: 0;
+    width: 200px;
+    top: 5px;
+    text-align: left;
+    margin:0;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+  
+    /* Below is the footer*/
+  footer{
+      padding:10px 0 10px;
+      font-size:80%;
+      position: absolute;
+      bottom:0;
+      width: 100%;
+  }
+  
+  .copyright-text{
+      color: black;
+      padding-top: 10px;
+      display: table;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  @media screen and (max-width: 1400px) {
+    pre{
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    pre{
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+    pre{
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    pre{
+      font-size: 13px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    pre{
+      font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width: 570px) {
+    pre{
+      font-size: 11px;
+    }
+    .alert{
+      font-size: 80%;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    pre{
+      font-size: 10px;
+    }
+    .alert{
+      font-size: 60%;
+    }
+  }
+
+    /* this is the alert user section css */
+    .alert {
+      font-family:Arial, Helvetica, sans-serif;
+      padding: 1rem;
+      margin:0;
+      background-color: #495bff;
+      color: white;
+      font-size: 15px;
+      animation-duration: 5s;
+      animation-name: appear;
+      position: sticky;
+      z-index: 999999;
+    }
+    
+    .closebtn {
+      margin-left: 8px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 25px;
+      line-height: 25px;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+    
+    .closebtn:hover {
+      color: black;
+    }
+  
+
+    @keyframes appear{
+      from{
+        opacity: 0.1;
+      }
+      to{
+        opacity: 1;
+      }
+    }

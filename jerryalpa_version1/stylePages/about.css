@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+  }
+  
+    body, html {
+        font-family:Arial, Helvetica, sans-serif;
+        /* Arial, Helvetica, sans-serif*/
+        height: 100%;
+        margin: 0;
+        /* background-color: rgb(241, 12, 12);; */
+        background-color: white;
+        scroll-behavior: smooth;
+    }
+
+    h1{
+        font-size: 300%;
+    }
+    /* scroll bar style */
+  /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+  
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+   
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: rgb(107, 106, 106); 
+    }
+  
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(51, 51, 51); 
+    }
+
+    .p1{
+        font-family: 'Courier New', Courier, monospace;
+        /* display: inline-block; */
+        /* color: rgb(252, 252, 252); */
+        color: black;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    .p2{
+        font-family: 'Courier New', Courier, monospace;
+        display: inline-block;
+        text-indent: 30px;
+        font-size: 25px;
+        font-weight: bold;
+        margin:20px;
+    }
+
+    .icon2{
+        border-radius: 25%;
+        width:100px;
+        height:100px;
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    hr{
+        border: 5px dashed black;
+    }
+
+    @media screen and (max-width: 850px) {
+        .p1 .p2{
+            font-size: 19px;
+        }
+        hr{
+            border: 2px solid black;
+        }
+      }
+
+    @media screen and (max-width: 680px) {
+        .p1 .p2{
+            font-size: 15px;
+        }
+        hr{
+            border: 2px solid black;
+        }
+      }
+
+    @media screen and (max-width: 400px) {
+        .p1 .p2{
+            font-size: 6px;
+        }
+        hr{
+            border: 2px solid black;
+        }
+      }
+
+    .back-to-home, .back-to-home:focus, .back-to-home:visited{
+        background-color: rgb(255, 241, 46);
+        border: 3px solid black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .back-to-home:hover{
+        background-color: rgb(255, 255, 255);
+    }
+
+
+    a:hover, a:link, a:visited {
+        text-decoration:underline;
+        color:black;
+    }
+
+    /* Below is the footer*/
+    .footer{
+        padding:10px 0 10px;
+        font-size:75%;
+      }
+    
+      .copyright-text{
+        color: black;
+        padding-top: 10px;
+        display: table;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
