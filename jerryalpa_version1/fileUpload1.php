@@ -11,8 +11,8 @@ use Aws\S3\Exception\S3Exception;
 if(isset($_SESSION['userName']) && isset($_SESSION['time']) && isset($_SESSION['valid'])){
 // AWS Info
 $bucketName = 'test1-1';
-$IAM_KEY = 'AKIAZXTHLVQD7DBWZGEN';
-$IAM_SECRET = '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';
+$IAM_KEY = '';
+$IAM_SECRET = '';
 
 // Connect to AWS
 try {
