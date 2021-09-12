@@ -8,5 +8,6 @@ email services.
 Plan in future: implement delete action on my terrapin storage, ;;; 
 
 #Server2: store user posted product (item/skills) info, assist display products. 
+find server2 in here: https://github.com/jerryo0/server2.git
 
 Plan in future (within 1 to 2 months): implement delete action on user posts.   
