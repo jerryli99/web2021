@@ -159,18 +159,18 @@
  */
 
 function emailThePoster($name, $sendEmailTo, $category, $text, $contactUser){
-    $sender = 'mamamlenglish@gmail.com';
+    $sender = '';
     $senderName = 'Terrapin Exchange - Exchanger';
     $mail = new PHPMailer(true);
     // Replace recipient@example.com with a "To" address. If your account
     // is still in the sandbox, this address must be verified.
     $recipient = $sendEmailTo;
     // Replace smtp_username with your Amazon SES SMTP user name.
-    $usernameSmtp = 'AKIAZXTHLVQDZMVFFD4B';
+    $usernameSmtp = '';
     // Replace smtp_password with your Amazon SES SMTP password.
-    $passwordSmtp = 'BDbykjpsWJXUVO5PwXGBT5m9Cfy9iHPmqvYF3LXK9dcc';
-    $host = 'email-smtp.us-east-1.amazonaws.com';
-    $port = 587;
+    $passwordSmtp = '';
+    $host = '';
+    $port = ;
     // The subject line of the email
     $subject = 'Terrapin Exchange - Exchanger';
     // The HTML-formatted body of the email
