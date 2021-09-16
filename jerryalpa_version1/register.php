@@ -140,7 +140,7 @@
                 if($execval){
 
                     // This address must be verified with Amazon SES.
-     $sender = 'mamamlenglish@gmail.com';
+     $sender = '';
      $senderName = 'Terrapin Exchange - Jerry Li';
 
      $mail = new PHPMailer(true);
@@ -154,7 +154,7 @@
     // // Replace smtp_password with your Amazon SES SMTP password.
      $passwordSmtp = '';
 
-     $host = 'email-smtp.us-east-1.amazonaws.com';
+     $host = '';
      $port = 587;
 
     // // The subject line of the email
