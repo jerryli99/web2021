@@ -113,7 +113,7 @@
             }else{
                 
                 //user google captcha before insert into database.
-                $secretKey = "6LfxiIEbAAAAAJ3Lq2mkduZ9IR3nRzrqTGbTqlsM";
+                $secretKey = "";
                 $responseKey = $_POST['g-recaptcha-response'];
                 $userIP = $_SERVER['REMOTE_ADDR'];
                 $url = "https://www.recaptcha.net/recaptcha/api/siteverify?secret=" . 
@@ -149,10 +149,10 @@
      $recipient = $_POST['email'];
 
     // // Replace smtp_username with your Amazon SES SMTP user name.
-     $usernameSmtp = 'AKIAZXTHLVQDZMVFFD4B';
+     $usernameSmtp = '';
 
     // // Replace smtp_password with your Amazon SES SMTP password.
-     $passwordSmtp = 'BDbykjpsWJXUVO5PwXGBT5m9Cfy9iHPmqvYF3LXK9dcc';
+     $passwordSmtp = '';
 
      $host = 'email-smtp.us-east-1.amazonaws.com';
      $port = 587;
