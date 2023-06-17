@@ -41,7 +41,7 @@
                     if($user_row['verify_status'] == 1){
 
                         //google captcha
-                        $secretKey = "6LfxiIEbAAAAAJ3Lq2mkduZ9IR3nRzrqTGbTqlsM";
+                        $secretKey = "";
                         $responseKey = $_POST['g-recaptcha-response'];
                         $userIP = $_SERVER['REMOTE_ADDR'];
                         $url = "https://www.recaptcha.net/recaptcha/api/siteverify?secret=" . $secretKey . "&response=" . $responseKey .  "&userip=" . $userIP;
